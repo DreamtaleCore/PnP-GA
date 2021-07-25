@@ -15,7 +15,22 @@
 
 **Picture:**  *The proposed architecture.*
 
+---
 
+**Results**
+
+|   Input    | Method               |           $\mathcal{D}_E\rightarrow\mathcal{D}_M$            |           $\mathcal{D}_E\rightarrow\mathcal{D}_D$            |           $\mathcal{D}_G\rightarrow\mathcal{D}_M$            |           $\mathcal{D}_G\rightarrow\mathcal{D}_D$            |
+| :--------: | -------------------- | :----------------------------------------------------------: | :----------------------------------------------------------: | :----------------------------------------------------------: | :----------------------------------------------------------: |
+|    Face    | Baseline             |                            8.767                             |                            8.578                             |                            7.662                             |                            8.977                             |
+|    Face    | Baseline + PnP-GA    | **5.529** <span style="color:darkred;font-size:13px;">$\blacktriangledown$36.9</span> | **5.867** <span style="color:darkred;font-size:13px;">$\blacktriangledown$31.6</span> | **6.176** <span style="color:darkred;font-size:13px;">$\blacktriangledown$19.4</span> | **7.922** <span style="color:darkred;font-size:13px;">$\blacktriangledown$11.8</span> |
+|    Face    | ResNet50             |                            8.017                             |                            8.310                             |                            8.328                             |                            7.549                             |
+|    Face    | ResNet50 + PnP-GA    | **6.000** <span style="color:darkred;font-size:13px;">$\blacktriangledown$25.2</span> | **6.172** <span style="color:darkred;font-size:13px;">$\blacktriangledown$25.7</span> | **5.739** <span style="color:darkred;font-size:13px;">$\blacktriangledown$31.1</span> | **7.042** <span style="color:darkred;font-size:13px;">$\blacktriangledown$6.7</span> |
+|    Face    | SWCNN                |                            10.939                            |                            24.941                            |                            10.021                            |                            13.473                            |
+|    Face    | SWCNN + PnP-GA       | **8.139** <span style="color:darkred;font-size:13px;">$\blacktriangledown$25.6</span> | **15.794** <span style="color:darkred;font-size:13px;">$\blacktriangledown$36.7</span> | **8.740** <span style="color:darkred;font-size:13px;">$\blacktriangledown$12.8</span> | **11.376** <span style="color:darkred;font-size:13px;">$\blacktriangledown$15.6</span> |
+| Face + Eye | CA-Net               |                              --                              |                              --                              |                            21.276                            |                            30.890                            |
+| Face + Eye | CA-Net + PnP-GA      |                              --                              |                              --                              | **17.597** <span style="color:darkred;font-size:13px;">$\blacktriangledown$17.3</span> | **16.999** <span style="color:darkred;font-size:13px;">$\blacktriangledown$44.9</span> |
+| Face + Eye | Dilated-Net          |                              --                              |                              --                              |                            16.683                            |                            18.996                            |
+| Face + Eye | Dilated-Net + PnP-GA |                              --                              |                              --                              | **15.461** <span style="color:darkred;font-size:13px;">$\blacktriangledown$7.3</span> | **16.835** <span style="color:darkred;font-size:13px;">$\blacktriangledown$11.4</span> |
 
 
 
