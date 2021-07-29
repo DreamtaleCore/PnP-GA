@@ -46,7 +46,7 @@ Yunfei Liu, Ruicong Liu, Haofei Wang, Feng Lu<br> <!-- >  https://arxiv.org/abs/
 Material related to our paper is available via the following links:
 
 - Paper: coming soon!
-- Project: https://liuyunfei.net/publication/iccv2021_pnp-ga/
+- Project: https://liuyunfei.net/publication/iccv2021_pnp-ga/external_pages/index.html
 - Code: https://github.com/DreamtaleCore/PnP-GA
 
 ## System requirements
