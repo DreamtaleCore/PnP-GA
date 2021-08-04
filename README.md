@@ -1,8 +1,8 @@
 # Generalizing Gaze Estimation with Outlier-guided Collaborative Adaptation
 
-![Python 3.7](https://img.shields.io/badge/python-3.7-DodgerBlue.svg?style=plastic)
-![Pytorch 1.10](https://img.shields.io/badge/pytorch-1.2.0-DodgerBlue.svg?style=plastic)
-![CUDA 10.0](https://img.shields.io/badge/cuda-10.0-DodgerBlue.svg?style=plastic)
+![Python 3.6](https://img.shields.io/badge/python-3.6-DodgerBlue.svg?style=plastic)
+![Pytorch 1.5.0](https://img.shields.io/badge/pytorch-1.5.0-DodgerBlue.svg?style=plastic)
+![CUDA 10.2](https://img.shields.io/badge/cuda-10.2-DodgerBlue.svg?style=plastic)
 ![License CC BY-NC](https://img.shields.io/badge/license-CC_BY--NC-DodgerBlue.svg?style=plastic)
 
  Our paper is accepted by **ICCV2021**. 
@@ -52,13 +52,57 @@ Material related to our paper is available via the following links:
 ## System requirements
 
 * Only Linux is tested, Windows is under test.
-* 64-bit Python 3.7 installation. 
+* 64-bit Python 3.6 installation. 
 
 ## Playing with pre-trained networks and training
 
-### Test and Train
+### Config
 
-Coming soon!
+You need to modify the config.yaml first, especially `xxx/image`, `xxx/label`, and `xxx_pretrains` params.
+
+`xxx/image` represents the path of label file.
+
+`xxx/root`  represents the path of image file.
+
+`xxx_pretrains`  represents the path of pretrained models.
+
+A example of label file is `data` folder. Each line in label file is conducted as:
+
+```bash
+p00/face/1.jpg 0.2558059438789034,-0.05467275933864655 -0.05843388117618364,0.46745964684693614 ... ...
+```
+
+Where our code reads image data form `os.path.join(xxx/root, "p00/face/1.jpg")` and reads ground-truth labels of gaze direction from the rest in label file.
+
+### Train
+
+We provide three optional arguments, which are `--oma2`, `--js` and `--sg`. They repersent three different network components, which could be found in our paper.
+
+`--source` and `--target` represent the datasets used as the source domain and the target domain. You can choose among `eth, gaze360, mpii, edp`.
+
+`--i` represents the index of person which is used as the training set. You can set it as -1 for using all the person as the training set.
+
+`--pics` represents the number of target domain samples for adaptation.
+
+We also provide other arguments for adjusting the hyperparameters in our PnP-GA architecture, which could be found in our paper.
+
+For example, you can run the code like:
+
+```bash
+python3 adapt.py --i 0 --pics 10 --savepath path/to/save --source eth --target mpii --gpu 0 --js --oma2 --sg
+```
+
+### Test
+
+`--i, --savepath, --target` are the same as training.
+
+`--p` represents the index of person which is used as the training set in the adaptation process.
+
+For example, you can run the code like:
+
+```bash
+python3 test.py --i -1 --p 0 --savepath path/to/save --target mpii
+```
 
 ## Citation
 

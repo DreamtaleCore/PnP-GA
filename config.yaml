@@ -1,0 +1,83 @@
+---
+test:
+  load:
+    begin_step: 1
+    end_step: 10
+    steps: 1
+  eth:
+    image: "/home/lrc/gaze_datasets/eth/Image"
+    label: "/home/lrc/gaze_datasets/eth/Label"
+  edp:
+    image: "/home/lrc/gaze_datasets/EyeDiap/Image"
+    label: "/home/lrc/gaze_datasets/EyeDiap/Label"
+  mpii:
+    image: "/home/lrc/gaze_datasets/MPIIFaceGaze/Image"
+    label: "/home/lrc/gaze_datasets/MPIIFaceGaze/Label"
+  gaze360:
+    image: "/home/lrc/gaze_datasets/Gaze360/Image"
+    label: "/home/lrc/gaze_datasets/Gaze360/Label"
+outlier:
+  params:
+    epoch: 10
+    decay: 1
+    decay_step: 10
+  save:
+    step: 1
+  eth:
+    image: "/home/lrc/gaze_datasets/eth/Image"
+    label: "/home/lrc/gaze_datasets/eth/Label"
+  edp:
+    image: "/home/lrc/gaze_datasets/EyeDiap/Image"
+    label: "/home/lrc/gaze_datasets/EyeDiap/Label"
+  mpii:
+    image: "/home/lrc/gaze_datasets/MPIIFaceGaze/Image"
+    label: "/home/lrc/gaze_datasets/MPIIFaceGaze/Label"
+  gaze360:
+    image: "/home/lrc/gaze_datasets/Gaze360/Image"
+    label: "/home/lrc/gaze_datasets/Gaze360/Label"
+  eth_pretrains: ["/home/lrc/PnP-GA/adp_gaze/pre_model/Iter_3_eth.pt",
+              "/home/lrc/PnP-GA/adp_gaze/pre_model/Iter_5_eth.pt",
+              "/home/lrc/PnP-GA/adp_gaze/pre_model/Iter_6_eth.pt",
+              "/home/lrc/PnP-GA/adp_gaze/pre_model/Iter_7_eth.pt",
+              "/home/lrc/PnP-GA/adp_gaze/pre_model/Iter_10_eth.pt",
+              "/home/lrc/PnP-GA/adp_gaze/pre_model/Iter_12_eth.pt",
+              "/home/lrc/PnP-GA/adp_gaze/pre_model/Iter_13_eth.pt",
+              "/home/lrc/PnP-GA/adp_gaze/pre_model/Iter_14_eth.pt",
+              "/home/lrc/PnP-GA/adp_gaze/pre_model/Iter_15_eth.pt",
+              "/home/lrc/PnP-GA/adp_gaze/pre_model/Iter_16_eth.pt",
+              "/home/lrc/PnP-GA/Gaze360-test/eth_exp2/checkpoint/subject0000.label/Iter_5_eth.pt",
+              "/home/lrc/PnP-GA/Gaze360-test/eth_exp2/checkpoint/subject0000.label/Iter_6_eth.pt",
+              "/home/lrc/PnP-GA/Gaze360-test/eth_exp2/checkpoint/subject0000.label/Iter_7_eth.pt",
+              "/home/lrc/PnP-GA/Gaze360-test/eth_exp2/checkpoint/subject0000.label/Iter_8_eth.pt",
+              "/home/lrc/PnP-GA/Gaze360-test/eth_exp2/checkpoint/subject0000.label/Iter_10_eth.pt"]
+  gaze360_pretrains: ["/home/lrc/PnP-GA/adp_gaze/pre_model/Iter_2_gaze360.pt",
+                      "/home/lrc/PnP-GA/adp_gaze/pre_model/Iter_4_gaze360.pt",
+                      "/home/lrc/PnP-GA/adp_gaze/pre_model/Iter_6_gaze360.pt",
+                      "/home/lrc/PnP-GA/adp_gaze/pre_model/Iter_8_gaze360.pt",
+                      "/home/lrc/PnP-GA/adp_gaze/pre_model/Iter_12_gaze360.pt",
+                      "/home/lrc/PnP-GA/adp_gaze/pre_model/Iter_16_gaze360.pt",
+                      "/home/lrc/PnP-GA/adp_gaze/pre_model/Iter_18_gaze360.pt",
+                      "/home/lrc/PnP-GA/adp_gaze/pre_model/Iter_20_gaze360.pt",
+                      "/home/lrc/PnP-GA/adp_gaze/pre_model/Iter_22_gaze360.pt",
+                      "/home/lrc/PnP-GA/adp_gaze/pre_model/Iter_24_gaze360.pt"]
+  mpii_pretrains: [ "/home/lrc/PnP-GA/Gaze360-test/exp/checkpoint/p00.label/Iter_6_mpii.pt",
+                    "/home/lrc/PnP-GA/Gaze360-test/exp/checkpoint/p00.label/Iter_8_mpii.pt",
+                    "/home/lrc/PnP-GA/Gaze360-test/exp/checkpoint/p00.label/Iter_10_mpii.pt",
+                    "/home/lrc/PnP-GA/Gaze360-test/exp/checkpoint/p00.label/Iter_12_mpii.pt",
+                    "/home/lrc/PnP-GA/Gaze360-test/exp/checkpoint/p00.label/Iter_14_mpii.pt",
+                    "/home/lrc/PnP-GA/Gaze360-test/exp/checkpoint/p00.label/Iter_16_mpii.pt",
+                    "/home/lrc/PnP-GA/Gaze360-test/exp/checkpoint/p00.label/Iter_18_mpii.pt",
+                    "/home/lrc/PnP-GA/Gaze360-test/exp/checkpoint/p00.label/Iter_20_mpii.pt",
+                    "/home/lrc/PnP-GA/Gaze360-test/exp/checkpoint/p00.label/Iter_22_mpii.pt",
+                    "/home/lrc/PnP-GA/Gaze360-test/exp/checkpoint/p00.label/Iter_24_mpii.pt"]
+  edp_pretrains: [  "/home/lrc/PnP-GA/Gaze360-test/edp_exp/checkpoint/p1.label/Iter_5_Gaze360.pt",
+                    "/home/lrc/PnP-GA/Gaze360-test/edp_exp/checkpoint/p1.label/Iter_10_Gaze360.pt",
+                    "/home/lrc/PnP-GA/Gaze360-test/edp_exp/checkpoint/p1.label/Iter_15_Gaze360.pt",
+                    "/home/lrc/PnP-GA/Gaze360-test/edp_exp/checkpoint/p1.label/Iter_20_Gaze360.pt",
+                    "/home/lrc/PnP-GA/Gaze360-test/edp_exp/checkpoint/p1.label/Iter_25_Gaze360.pt",
+                    "/home/lrc/PnP-GA/Gaze360-test/edp_exp/checkpoint/p1.label/Iter_30_Gaze360.pt",
+                    "/home/lrc/PnP-GA/Gaze360-test/edp_exp/checkpoint/p1.label/Iter_35_Gaze360.pt",
+                    "/home/lrc/PnP-GA/Gaze360-test/edp_exp/checkpoint/p1.label/Iter_40_Gaze360.pt",
+                    "/home/lrc/PnP-GA/Gaze360-test/edp_exp/checkpoint/p1.label/Iter_45_Gaze360.pt",
+                    "/home/lrc/PnP-GA/Gaze360-test/edp_exp/checkpoint/p1.label/Iter_50_Gaze360.pt"]
+
